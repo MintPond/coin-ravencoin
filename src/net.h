@@ -61,7 +61,7 @@ static const unsigned int MAX_SUBVERSION_LENGTH = 256;
 /** Maximum number of automatic outgoing nodes */
 static const int MAX_OUTBOUND_CONNECTIONS = 12;
 /** Maximum number of addnode outgoing nodes */
-static const int MAX_ADDNODE_CONNECTIONS = 12;
+static const int MAX_ADDNODE_CONNECTIONS = 128/*MintPond*/;
 /** -listen default */
 static const bool DEFAULT_LISTEN = true;
 /** -upnp default */
