@@ -2380,6 +2380,10 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         CBlockHeaderAndShortTxIDs cmpctblock;
         vRecv >> cmpctblock;
 
+        // MintPond
+        LogPrint(BCLog::BLOCKS, "NetMsgType::CMPCTBLOCK received block %s peer=%d addrName=%s\n", cmpctblock.header.GetHash().ToString(), pfrom->GetId(), pfrom->GetAddrName());
+        LogPrint(BCLog::NET, "received block %s peer=%d\n", cmpctblock.header.GetHash().ToString(), pfrom->GetId());
+
         bool received_new_header = false;
 
         {
@@ -2711,6 +2715,9 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
     {
         std::shared_ptr<CBlock> pblock = std::make_shared<CBlock>();
         vRecv >> *pblock;
+
+        // MintPond
+        LogPrint(BCLog::BLOCKS, "NetMsgType::BLOCK received block %s peer=%d addrName=%s\n", pblock->GetHash().ToString(), pfrom->GetId(), pfrom->GetAddrName());
 
         LogPrint(BCLog::NET, "received block %s peer=%d\n", pblock->GetHash().ToString(), pfrom->GetId());
 
