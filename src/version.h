@@ -1,5 +1,5 @@
 // Copyright (c) 2012-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2017-2020 The Raven Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,12 +13,12 @@
 // Update these four values on every release cycle
 // These values should match the values in configure.ac
 // Used for checking the Ravencoin releases on github
-static const std::string SOFTWARE_VERSION = "v4.1.0";
+static const std::string SOFTWARE_VERSION = "v4.2.0";
 static const int MAIN_SOFTWARE_VERSION = 4;
-static const int SECOND_SOFTWARE_VERSION = 1;
+static const int SECOND_SOFTWARE_VERSION = 2;
 static const int THIRD_SOFTWARE_VERSION = 0;
 
-static const int PROTOCOL_VERSION = 70027;
+static const int PROTOCOL_VERSION = 70028;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
